@@ -25,8 +25,8 @@ class juxing1 implements shuzhi {//实现接口
         return 2*x+2*y;
     }
 }
-//多接口
-interface shuchu{
+//接口的继承
+interface shuchu{//利用接口进行输出
     default void shuchu1(double a){// 默认方法，提供一个默认的打印信息实现,可重写
         System.out.println("体积"+a+"\t默认方法");
     }
@@ -34,7 +34,13 @@ interface shuchu{
         System.out.println("周长"+a+"\t静态方法");
     }
 }
-class juxing2 implements shuzhi,shuchu {//实现多接口
+interface shuchu2 extends shuchu{
+    default void shuchu2(){
+        System.out.println("这里是接口的继承");
+    }
+}
+//多接口
+class juxing2 implements shuzhi,shuchu2 {//实现多接口
     double x, y;
     public void juxing(int x, int y) {//初始化长和宽
         this.x = x;
@@ -49,6 +55,7 @@ class juxing2 implements shuzhi,shuchu {//实现多接口
         return 2*x+2*y;
     }
 }
+
 public class jieko {
     public static void main(String[] args) {
         System.out.println("长方形面积周长计算机兼接口演示");
@@ -70,6 +77,7 @@ public class jieko {
             j2.juxing(x,y);
             j2.shuchu1(j2.s());//类中有输出，
             shuchu.shuchu2(j2.l());//静态方法可以直接引用
+            j2.shuchu2();//调用接口继承新加的输出
         }
     }
 }
