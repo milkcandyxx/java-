@@ -1,5 +1,5 @@
 package jieko;
-import java.util.Scanner;//Scanner类用于输入
+import java.util.Scanner;//引用Scanner类用于输入
 /*接口类似与抽象类，
 但是一个类可以实现多个接口，
 一个类只能继承一个抽象类
