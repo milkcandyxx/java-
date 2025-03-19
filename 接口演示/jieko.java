@@ -1,4 +1,4 @@
-package jieko;
+package jieko.接口演示;
 // 导入Scanner类，用于从控制台读取用户输入
 import java.util.Scanner;
 

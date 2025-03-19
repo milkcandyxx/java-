@@ -1,4 +1,4 @@
-package jieko;
+package jieko.logo;
 
 public class logo {
 }
